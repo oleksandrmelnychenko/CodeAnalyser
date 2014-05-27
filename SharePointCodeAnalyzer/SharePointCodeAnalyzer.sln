@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePointCodeAnalyzer.Client", "SharePointCodeAnalyzer.Client\SharePointCodeAnalyzer.Client.csproj", "{F8356962-09AA-432E-A0BD-D8949F58466B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePointCodeAnalyzer.CommonControls", "SharePointCodeAnalyzer.CommonControls\SharePointCodeAnalyzer.CommonControls.csproj", "{F14249A6-D2CD-4949-8F29-4BAAB2C4FB45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F8356962-09AA-432E-A0BD-D8949F58466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8356962-09AA-432E-A0BD-D8949F58466B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8356962-09AA-432E-A0BD-D8949F58466B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14249A6-D2CD-4949-8F29-4BAAB2C4FB45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14249A6-D2CD-4949-8F29-4BAAB2C4FB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14249A6-D2CD-4949-8F29-4BAAB2C4FB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14249A6-D2CD-4949-8F29-4BAAB2C4FB45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

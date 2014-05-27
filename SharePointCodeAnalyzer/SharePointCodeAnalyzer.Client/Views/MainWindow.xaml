@@ -1,0 +1,157 @@
+﻿<Window x:Class="SharePointCodeAnalyzer.Client.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:SharePointCodeAnalyzer.CommonControls.Controls;assembly=SharePointCodeAnalyzer.CommonControls"
+        Title="SharePoint Code Analyzer"
+        Width="1200"
+        Height="600"
+        MinWidth="500"
+        MinHeight="500"
+        BorderThickness="0"
+        ResizeMode="NoResize"
+        WindowState="Maximized"
+        WindowStyle="None">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border Name="shadowGrid"
+            Background="#00FFFFFF"
+            BorderBrush="#FF1B7F97"
+            BorderThickness="1">
+
+        <Grid Background="{StaticResource BackgroundFullScreen}" Grid.Name="mainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition RowDefinition.Height="25" />
+                <RowDefinition RowDefinition.Height="auto" />
+                <RowDefinition RowDefinition.Height="auto" />
+                <RowDefinition RowDefinition.Height="auto" />
+                <RowDefinition RowDefinition.Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ColumnDefinition.Width="*" />
+                    <ColumnDefinition ColumnDefinition.Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1"
+                            Margin="0 0 10 0"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <Button Name="MinimizeButton"
+                            Click="MinimizeButton_OnClick"
+                            Style="{StaticResource IconButtonStyle}">
+                        <Image Width="12"
+                               Height="12"
+                               Source="/Images/assets/windowminimize.png" />
+                    </Button>
+                    <Button Name="NormalButton"
+                            Click="NormalButton_OnClick"
+                            Style="{StaticResource IconButtonStyle}">
+                        <Image Width="12"
+                               Height="12"
+                               Source="/Images/assets/windowNormal.png" />
+                    </Button>
+
+                    <Button Name="CloseButton"
+                            Click="CloseButton_OnClick"
+                            Style="{StaticResource IconButtonStyle}">
+                        <Image Width="12"
+                               Height="12"
+                               Source="/Images/assets/windowclose.png" />
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <controls:FadingListView Margin="0,0,40,0"
+                                         HorizontalAlignment="Right"
+                                         ItemTemplate="{StaticResource StatusBarComponentItemTemplate}"
+                                         ItemsSource="{Binding StatusBar}"
+                                         Style="{StaticResource ListBoxWithItemsLikeButtonsStyle}">
+
+                    <controls:FadingListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </controls:FadingListView.ItemsPanel>
+
+                </controls:FadingListView>
+            </Grid>
+
+            <Grid Name="ContentGrid" Grid.Row="4">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+
+                    <controls:TransitioningContentControl Grid.Row="0"
+                                                          HorizontalAlignment="Stretch"
+                                                          VerticalAlignment="Stretch"
+                                                          HorizontalContentAlignment="Stretch"
+                                                          VerticalContentAlignment="Stretch"
+                                                          Content="{Binding MainContent}" />
+
+                    <Grid Name="AppBar"
+                          Grid.Row="1"
+                          Height="80"
+                          VerticalAlignment="Bottom"
+                          Background="{DynamicResource ApplicationBarBackground}">
+                        <Grid Style="{StaticResource AppBarStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition ColumnDefinition.Width="50*" />
+                                <ColumnDefinition ColumnDefinition.Width="50*" />
+                                <ColumnDefinition ColumnDefinition.Width="20" />
+                            </Grid.ColumnDefinitions>
+
+                            <controls:FadingItemsControl xmlns:p9="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                                         Margin="60 0 0 0"
+                                                         ItemTemplate="{StaticResource AppCommandItemTemplate}"
+                                                         ItemsSource="{Binding Path=ContextCommands}"
+                                                         Style="{StaticResource StandardListBox}"
+                                                         p9:Grid.Column="0">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </controls:FadingItemsControl>
+                            <controls:FadingItemsControl xmlns:p9="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                                         HorizontalAlignment="Right"
+                                                         ItemTemplate="{StaticResource AppCommandItemTemplate}"
+                                                         ItemsSource="{Binding Path=SystemCommands}"
+                                                         Style="{StaticResource StandardListBox}"
+                                                         p9:DockPanel.Dock="Right"
+                                                         p9:Grid.Column="1">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </controls:FadingItemsControl>
+
+                        </Grid>
+                        <UIElement.RenderTransform>
+                            <TranslateTransform X="0" Y="0" />
+                        </UIElement.RenderTransform>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <FrameworkElement.LayoutTransform>
+                <ScaleTransform CenterX="0.5"
+                                CenterY="0.5"
+                                ScaleX="1.0"
+                                ScaleY="1.0" />
+            </FrameworkElement.LayoutTransform>
+        </Grid>
+    </Border>
+</Window>

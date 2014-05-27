@@ -53,18 +53,112 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="AppEngine\Navigation\INavigationHistory.cs" />
+    <Compile Include="AppEngine\Navigation\INavigationService.cs" />
+    <Compile Include="AppEngine\Navigation\NavigationService.cs" />
+    <Compile Include="AppEngine\TileCommonContracts\ITile.cs" />
+    <Compile Include="AppEngine\TileCommonContracts\ITileOneByOne.cs" />
+    <Compile Include="AppEngine\TileCommonContracts\ITileTwoByOne.cs" />
+    <Compile Include="AppEngine\TileCommonContracts\ITileTwoByTwo.cs" />
+    <Compile Include="AppEngine\TilesBuilder\MenuBlock.cs" />
+    <Compile Include="AppEngine\TilesBuilder\TileOneByOne.cs" />
+    <Compile Include="AppEngine\TilesBuilder\TileTwoByOne.cs" />
+    <Compile Include="AppEngine\TilesBuilder\TileTwoByTwo.cs" />
+    <Compile Include="AppEngine\Views\IShell.cs" />
+    <Compile Include="AppEngine\Views\ITileView.cs" />
+    <Compile Include="AppEngine\Views\IView.cs" />
+    <Compile Include="AppEngine\Views\ViewFactory.cs" />
+    <Compile Include="AppEngine\Views\ViewNavigationParameter.cs" />
+    <Compile Include="AppEngine\Views\ViewsContainer.cs" />
+    <Compile Include="ViewModels\BaseStatusBarConnectionManager.cs" />
+    <Compile Include="ViewModels\BaseStatusBarFeedbackViewModel.cs" />
+    <Compile Include="ViewModels\BaseStatusBarLicenseManagerViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\MainFrameViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MenuBlockFrameViewModel.cs" />
+    <Compile Include="Views\BaseStatusBarConnectionManagerView.xaml.cs">
+      <DependentUpon>BaseStatusBarConnectionManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseStatusBarFeedbackView.xaml.cs">
+      <DependentUpon>BaseStatusBarFeedbackView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseStatusBarLicenseManagerView.xaml.cs">
+      <DependentUpon>BaseStatusBarLicenseManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainFrameView.xaml.cs">
+      <DependentUpon>MainFrameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuBlockFrameView.xaml.cs">
+      <DependentUpon>MenuBlockFrameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TileViews\AnalyseView.xaml.cs">
+      <DependentUpon>AnalyseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TileViews\LearnView.xaml.cs">
+      <DependentUpon>LearnView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TileViews\ReviewView.xaml.cs">
+      <DependentUpon>ReviewView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Skins\MainSkin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BaseStatusBarConnectionManagerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BaseStatusBarFeedbackView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BaseStatusBarLicenseManagerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HomeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainFrameView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MenuBlockFrameView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TileViews\AnalyseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TileViews\LearnView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TileViews\ReviewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -84,11 +178,300 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Segoe UI Symbol.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SharePointCodeAnalyzer.CommonControls\SharePointCodeAnalyzer.CommonControls.csproj">
+      <Project>{f14249a6-d2cd-4949-8f29-4baab2c4fb45}</Project>
+      <Name>SharePointCodeAnalyzer.CommonControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\app.png" />
+    <Resource Include="Images\arrowbtn.png" />
+    <Resource Include="Images\assets\splashscreen.png" />
+    <Resource Include="Images\assets\windowclose.png" />
+    <Resource Include="Images\assets\windowmaximize.png" />
+    <Resource Include="Images\assets\windowminimize.png" />
+    <Resource Include="Images\assets\windownormal.png" />
+    <Resource Include="Images\assets\windowresize.png" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\nonshared\images\shell32_10.ico" />
+    <Resource Include="Images\nonshared\images\shell32_12.ico" />
+    <Resource Include="Images\nonshared\images\shell32_264.ico" />
+    <Resource Include="Images\nonshared\images\shell32_303.ico" />
+    <Resource Include="Images\nonshared\images\shell32_8.ico" />
+    <Resource Include="Images\nonshared\images\shell32_9.ico" />
+    <Resource Include="Images\result.png" />
+    <Resource Include="Images\result1.png" />
+    <Resource Include="Images\settings.png" />
+    <Resource Include="Images\shared\images\app.png" />
+    <Resource Include="Images\shared\images\background.png" />
+    <Resource Include="Images\shared\images\backgroundold.png" />
+    <Resource Include="Images\shared\images\icons\analysisdetails_128.png" />
+    <Resource Include="Images\shared\images\icons\analysisdetails_32.png" />
+    <Resource Include="Images\shared\images\icons\analysisdetails_48.png" />
+    <Resource Include="Images\shared\images\icons\analysisdetails_64.png" />
+    <Resource Include="Images\shared\images\icons\app.png" />
+    <Resource Include="Images\shared\images\icons\appfile_128.png" />
+    <Resource Include="Images\shared\images\icons\appfile_32.png" />
+    <Resource Include="Images\shared\images\icons\appfile_48.png" />
+    <Resource Include="Images\shared\images\icons\appfile_64.png" />
+    <Resource Include="Images\shared\images\icons\background.png" />
+    <Resource Include="Images\shared\images\icons\backgroundold.png" />
+    <Resource Include="Images\shared\images\icons\browserules.png" />
+    <Resource Include="Images\shared\images\icons\browserules_128.png" />
+    <Resource Include="Images\shared\images\icons\browserules_32.png" />
+    <Resource Include="Images\shared\images\icons\browserules_48.png" />
+    <Resource Include="Images\shared\images\icons\browserules_64.png" />
+    <Resource Include="Images\shared\images\icons\charts.png" />
+    <Resource Include="Images\shared\images\icons\chmhelp_128.png" />
+    <Resource Include="Images\shared\images\icons\chmhelp_32.png" />
+    <Resource Include="Images\shared\images\icons\chmhelp_48.png" />
+    <Resource Include="Images\shared\images\icons\chmhelp_64.png" />
+    <Resource Include="Images\shared\images\icons\community_128.png" />
+    <Resource Include="Images\shared\images\icons\community_32.png" />
+    <Resource Include="Images\shared\images\icons\community_48.png" />
+    <Resource Include="Images\shared\images\icons\community_64.png" />
+    <Resource Include="Images\shared\images\icons\dependency.png" />
+    <Resource Include="Images\shared\images\icons\dependencydetails_128.png" />
+    <Resource Include="Images\shared\images\icons\dependencydetails_32.png" />
+    <Resource Include="Images\shared\images\icons\dependencydetails_48.png" />
+    <Resource Include="Images\shared\images\icons\dependencydetails_64.png" />
+    <Resource Include="Images\shared\images\icons\dependencynotification_128.png" />
+    <Resource Include="Images\shared\images\icons\dependencynotification_32.png" />
+    <Resource Include="Images\shared\images\icons\dependencynotification_48.png" />
+    <Resource Include="Images\shared\images\icons\dependencynotification_64.png" />
+    <Resource Include="Images\shared\images\icons\dependencyoverview_128.png" />
+    <Resource Include="Images\shared\images\icons\dependencyoverview_32.png" />
+    <Resource Include="Images\shared\images\icons\dependencyoverview_48.png" />
+    <Resource Include="Images\shared\images\icons\dependencyoverview_64.png" />
+    <Resource Include="Images\shared\images\icons\dependencyreports_128.png" />
+    <Resource Include="Images\shared\images\icons\dependencyreports_32.png" />
+    <Resource Include="Images\shared\images\icons\dependencyreports_48.png" />
+    <Resource Include="Images\shared\images\icons\dependencyreports_64.png" />
+    <Resource Include="Images\shared\images\icons\emailsupport_128.png" />
+    <Resource Include="Images\shared\images\icons\emailsupport_32.png" />
+    <Resource Include="Images\shared\images\icons\emailsupport_48.png" />
+    <Resource Include="Images\shared\images\icons\emailsupport_64.png" />
+    <Resource Include="Images\shared\images\icons\groupeditems_128.png" />
+    <Resource Include="Images\shared\images\icons\groupeditems_32.png" />
+    <Resource Include="Images\shared\images\icons\groupeditems_48.png" />
+    <Resource Include="Images\shared\images\icons\groupeditems_64.png" />
+    <Resource Include="Images\shared\images\icons\groupwithsubgroups_128.png" />
+    <Resource Include="Images\shared\images\icons\groupwithsubgroups_32.png" />
+    <Resource Include="Images\shared\images\icons\groupwithsubgroups_48.png" />
+    <Resource Include="Images\shared\images\icons\groupwithsubgroups_64.png" />
+    <Resource Include="Images\shared\images\icons\help.png" />
+    <Resource Include="Images\shared\images\icons\helpoverview_128.png" />
+    <Resource Include="Images\shared\images\icons\helpoverview_32.png" />
+    <Resource Include="Images\shared\images\icons\helpoverview_48.png" />
+    <Resource Include="Images\shared\images\icons\helpoverview_64.png" />
+    <Resource Include="Images\shared\images\icons\hiveexplorer_128.png" />
+    <Resource Include="Images\shared\images\icons\hiveexplorer_32.png" />
+    <Resource Include="Images\shared\images\icons\hiveexplorer_48.png" />
+    <Resource Include="Images\shared\images\icons\hiveexplorer_64.png" />
+    <Resource Include="Images\shared\images\icons\hivefolder_128.png" />
+    <Resource Include="Images\shared\images\icons\hivefolder_32.png" />
+    <Resource Include="Images\shared\images\icons\hivefolder_48.png" />
+    <Resource Include="Images\shared\images\icons\hivefolder_64.png" />
+    <Resource Include="Images\shared\images\icons\inventory.png" />
+    <Resource Include="Images\shared\images\icons\inventorydetails_128.png" />
+    <Resource Include="Images\shared\images\icons\inventorydetails_32.png" />
+    <Resource Include="Images\shared\images\icons\inventorydetails_48.png" />
+    <Resource Include="Images\shared\images\icons\inventorydetails_64.png" />
+    <Resource Include="Images\shared\images\icons\inventorygroupwithsubgroups_128.png" />
+    <Resource Include="Images\shared\images\icons\inventorygroupwithsubgroups_32.png" />
+    <Resource Include="Images\shared\images\icons\inventorygroupwithsubgroups_48.png" />
+    <Resource Include="Images\shared\images\icons\inventorygroupwithsubgroups_64.png" />
+    <Resource Include="Images\shared\images\icons\inventoryoverview_128.png" />
+    <Resource Include="Images\shared\images\icons\inventoryoverview_32.png" />
+    <Resource Include="Images\shared\images\icons\inventoryoverview_48.png" />
+    <Resource Include="Images\shared\images\icons\inventoryoverview_64.png" />
+    <Resource Include="Images\shared\images\icons\inventoryreports_128.png" />
+    <Resource Include="Images\shared\images\icons\inventoryreports_32.png" />
+    <Resource Include="Images\shared\images\icons\inventoryreports_48.png" />
+    <Resource Include="Images\shared\images\icons\inventoryreports_64.png" />
+    <Resource Include="Images\shared\images\icons\knownissues_128.png" />
+    <Resource Include="Images\shared\images\icons\knownissues_32.png" />
+    <Resource Include="Images\shared\images\icons\knownissues_48.png" />
+    <Resource Include="Images\shared\images\icons\knownissues_64.png" />
+    <Resource Include="Images\shared\images\icons\licensefile_128.png" />
+    <Resource Include="Images\shared\images\icons\licensefile_32.png" />
+    <Resource Include="Images\shared\images\icons\licensefile_48.png" />
+    <Resource Include="Images\shared\images\icons\licensefile_64.png" />
+    <Resource Include="Images\shared\images\icons\locked.png" />
+    <Resource Include="Images\shared\images\icons\logentry_128.png" />
+    <Resource Include="Images\shared\images\icons\logentry_32.png" />
+    <Resource Include="Images\shared\images\icons\logentry_48.png" />
+    <Resource Include="Images\shared\images\icons\logentry_64.png" />
+    <Resource Include="Images\shared\images\icons\logging_128.png" />
+    <Resource Include="Images\shared\images\icons\logging_32.png" />
+    <Resource Include="Images\shared\images\icons\logging_48.png" />
+    <Resource Include="Images\shared\images\icons\logging_64.png" />
+    <Resource Include="Images\shared\images\icons\logo.png" />
+    <Resource Include="Images\shared\images\icons\metric.png" />
+    <Resource Include="Images\shared\images\icons\metriccharts_128.png" />
+    <Resource Include="Images\shared\images\icons\metriccharts_32.png" />
+    <Resource Include="Images\shared\images\icons\metriccharts_48.png" />
+    <Resource Include="Images\shared\images\icons\metriccharts_64.png" />
+    <Resource Include="Images\shared\images\icons\metricgroupwithsubgroups_128.png" />
+    <Resource Include="Images\shared\images\icons\metricgroupwithsubgroups_32.png" />
+    <Resource Include="Images\shared\images\icons\metricgroupwithsubgroups_48.png" />
+    <Resource Include="Images\shared\images\icons\metricgroupwithsubgroups_64.png" />
+    <Resource Include="Images\shared\images\icons\metricoverview_128.png" />
+    <Resource Include="Images\shared\images\icons\metricoverview_32.png" />
+    <Resource Include="Images\shared\images\icons\metricoverview_48.png" />
+    <Resource Include="Images\shared\images\icons\metricoverview_64.png" />
+    <Resource Include="Images\shared\images\icons\metricreports_128.png" />
+    <Resource Include="Images\shared\images\icons\metricreports_32.png" />
+    <Resource Include="Images\shared\images\icons\metricreports_48.png" />
+    <Resource Include="Images\shared\images\icons\metricreports_64.png" />
+    <Resource Include="Images\shared\images\icons\modellnode_128.png" />
+    <Resource Include="Images\shared\images\icons\modellnode_32.png" />
+    <Resource Include="Images\shared\images\icons\modellnode_48.png" />
+    <Resource Include="Images\shared\images\icons\modellnode_64.png" />
+    <Resource Include="Images\shared\images\icons\newproject_128.png" />
+    <Resource Include="Images\shared\images\icons\newproject_32.png" />
+    <Resource Include="Images\shared\images\icons\newproject_48.png" />
+    <Resource Include="Images\shared\images\icons\newproject_64.png" />
+    <Resource Include="Images\shared\images\icons\newquickanalysis_128.png" />
+    <Resource Include="Images\shared\images\icons\newquickanalysis_32.png" />
+    <Resource Include="Images\shared\images\icons\newquickanalysis_48.png" />
+    <Resource Include="Images\shared\images\icons\newquickanalysis_64.png" />
+    <Resource Include="Images\shared\images\icons\onlinehelp_128.png" />
+    <Resource Include="Images\shared\images\icons\onlinehelp_32.png" />
+    <Resource Include="Images\shared\images\icons\onlinehelp_48.png" />
+    <Resource Include="Images\shared\images\icons\onlinehelp_64.png" />
+    <Resource Include="Images\shared\images\icons\openproject_128.png" />
+    <Resource Include="Images\shared\images\icons\openproject_32.png" />
+    <Resource Include="Images\shared\images\icons\openproject_48.png" />
+    <Resource Include="Images\shared\images\icons\openproject_64.png" />
+    <Resource Include="Images\shared\images\icons\opensample_128.png" />
+    <Resource Include="Images\shared\images\icons\opensample_32.png" />
+    <Resource Include="Images\shared\images\icons\opensample_48.png" />
+    <Resource Include="Images\shared\images\icons\package.png" />
+    <Resource Include="Images\shared\images\icons\pdf_128.png" />
+    <Resource Include="Images\shared\images\icons\pdf_32.png" />
+    <Resource Include="Images\shared\images\icons\pdf_48.png" />
+    <Resource Include="Images\shared\images\icons\pdf_64.png" />
+    <Resource Include="Images\shared\images\icons\project.png" />
+    <Resource Include="Images\shared\images\icons\projectresult_128.png" />
+    <Resource Include="Images\shared\images\icons\projectresult_32.png" />
+    <Resource Include="Images\shared\images\icons\projectresult_48.png" />
+    <Resource Include="Images\shared\images\icons\projectresult_64.png" />
+    <Resource Include="Images\shared\images\icons\project_64.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysis.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysisresult_128.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysisresult_32.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysisresult_48.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysisresult_64.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysis_128.png" />
+    <Resource Include="Images\shared\images\icons\quickanalysis_64.png" />
+    <Resource Include="Images\shared\images\icons\reports_128.png" />
+    <Resource Include="Images\shared\images\icons\reports_32.png" />
+    <Resource Include="Images\shared\images\icons\reports_48.png" />
+    <Resource Include="Images\shared\images\icons\reports_64.png" />
+    <Resource Include="Images\shared\images\icons\report_128.png" />
+    <Resource Include="Images\shared\images\icons\report_32.png" />
+    <Resource Include="Images\shared\images\icons\report_48.png" />
+    <Resource Include="Images\shared\images\icons\report_64.png" />
+    <Resource Include="Images\shared\images\icons\rule.png" />
+    <Resource Include="Images\shared\images\icons\ruleallviolations_128.png" />
+    <Resource Include="Images\shared\images\icons\ruleallviolations_32.png" />
+    <Resource Include="Images\shared\images\icons\ruleallviolations_48.png" />
+    <Resource Include="Images\shared\images\icons\ruleallviolations_64.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalerrors_128.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalerrors_32.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalerrors_48.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalerrors_64.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalwarnings_128.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalwarnings_32.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalwarnings_48.png" />
+    <Resource Include="Images\shared\images\icons\rulecriticalwarnings_64.png" />
+    <Resource Include="Images\shared\images\icons\ruleerrors_128.png" />
+    <Resource Include="Images\shared\images\icons\ruleerrors_32.png" />
+    <Resource Include="Images\shared\images\icons\ruleerrors_48.png" />
+    <Resource Include="Images\shared\images\icons\ruleerrors_64.png" />
+    <Resource Include="Images\shared\images\icons\rulenotification_128.png" />
+    <Resource Include="Images\shared\images\icons\rulenotification_32.png" />
+    <Resource Include="Images\shared\images\icons\rulenotification_48.png" />
+    <Resource Include="Images\shared\images\icons\rulenotification_64.png" />
+    <Resource Include="Images\shared\images\icons\rulesoverview_128.png" />
+    <Resource Include="Images\shared\images\icons\rulesoverview_32.png" />
+    <Resource Include="Images\shared\images\icons\rulesoverview_48.png" />
+    <Resource Include="Images\shared\images\icons\rulesoverview_64.png" />
+    <Resource Include="Images\shared\images\icons\rulesreports_128.png" />
+    <Resource Include="Images\shared\images\icons\rulesreports_32.png" />
+    <Resource Include="Images\shared\images\icons\rulesreports_48.png" />
+    <Resource Include="Images\shared\images\icons\rulesreports_64.png" />
+    <Resource Include="Images\shared\images\icons\ruleviolationscharts_128.png" />
+    <Resource Include="Images\shared\images\icons\ruleviolationscharts_32.png" />
+    <Resource Include="Images\shared\images\icons\ruleviolationscharts_48.png" />
+    <Resource Include="Images\shared\images\icons\ruleviolationscharts_64.png" />
+    <Resource Include="Images\shared\images\icons\rulewarnings_128.png" />
+    <Resource Include="Images\shared\images\icons\rulewarnings_32.png" />
+    <Resource Include="Images\shared\images\icons\rulewarnings_48.png" />
+    <Resource Include="Images\shared\images\icons\rulewarnings_64.png" />
+    <Resource Include="Images\shared\images\icons\sample_128.png" />
+    <Resource Include="Images\shared\images\icons\sample_64.png" />
+    <Resource Include="Images\shared\images\icons\settings_128.png" />
+    <Resource Include="Images\shared\images\icons\settings_32.png" />
+    <Resource Include="Images\shared\images\icons\settings_48.png" />
+    <Resource Include="Images\shared\images\icons\settings_64.png" />
+    <Resource Include="Images\shared\images\icons\solutionbrowser_128.png" />
+    <Resource Include="Images\shared\images\icons\solutionbrowser_32.png" />
+    <Resource Include="Images\shared\images\icons\solutionbrowser_48.png" />
+    <Resource Include="Images\shared\images\icons\solutionbrowser_64.png" />
+    <Resource Include="Images\shared\images\icons\spcopcolored.png" />
+    <Resource Include="Images\shared\images\icons\spcoptool_32.png" />
+    <Resource Include="Images\shared\images\icons\spcoptool_48.png" />
+    <Resource Include="Images\shared\images\icons\spcopwhite.png" />
+    <Resource Include="Images\shared\images\icons\spdependcolored.png" />
+    <Resource Include="Images\shared\images\icons\spdependwhite.png" />
+    <Resource Include="Images\shared\images\icons\spinventorycolored.png" />
+    <Resource Include="Images\shared\images\icons\spinventorywhite.png" />
+    <Resource Include="Images\shared\images\icons\spmetricscolored.png" />
+    <Resource Include="Images\shared\images\icons\spmetricswhite.png" />
+    <Resource Include="Images\shared\images\icons\spsdtool_32.png" />
+    <Resource Include="Images\shared\images\icons\spsdtool_48.png" />
+    <Resource Include="Images\shared\images\icons\spsftool_32.png" />
+    <Resource Include="Images\shared\images\icons\spsftool_48.png" />
+    <Resource Include="Images\shared\images\icons\supportpage_128.png" />
+    <Resource Include="Images\shared\images\icons\supportpage_32.png" />
+    <Resource Include="Images\shared\images\icons\supportpage_48.png" />
+    <Resource Include="Images\shared\images\icons\supportpage_64.png" />
+    <Resource Include="Images\shared\images\icons\twitter.png" />
+    <Resource Include="Images\shared\images\icons\twitter_128.png" />
+    <Resource Include="Images\shared\images\icons\twitter_32.png" />
+    <Resource Include="Images\shared\images\icons\twitter_48.png" />
+    <Resource Include="Images\shared\images\icons\twitter_64.png" />
+    <Resource Include="Images\shared\images\icons\violation.png" />
+    <Resource Include="Images\shared\images\icons\violation2.png" />
+    <Resource Include="Images\shared\images\icons\visitor_128.png" />
+    <Resource Include="Images\shared\images\icons\visitor_32.png" />
+    <Resource Include="Images\shared\images\icons\visitor_48.png" />
+    <Resource Include="Images\shared\images\icons\visitor_64.png" />
+    <Resource Include="Images\shared\images\icons\wspfile_128.png" />
+    <Resource Include="Images\shared\images\icons\wspfile_32.png" />
+    <Resource Include="Images\shared\images\icons\wspfile_48.png" />
+    <Resource Include="Images\shared\images\icons\wspfile_64.png" />
+    <Resource Include="Images\shared\images\logo.png" />
+    <Resource Include="Images\shared\images\symbols\backbutton.png" />
+    <Resource Include="Images\shared\images\symbols\backbutton_highlight.png" />
+    <Resource Include="Images\shared\images\user.png" />
+    <Resource Include="Images\symbols\backbutton.png" />
+    <Resource Include="Images\symbols\backbutton_highlight.png" />
+    <Resource Include="Images\TileTest.png" />
+    <Resource Include="Images\TileTest2.png" />
+    <Resource Include="Images\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
