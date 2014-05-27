@@ -71,7 +71,7 @@ namespace SharePointCodeAnalyzer.Client.ViewModels
         /// </summary>
         public MainFrameViewModel()
         {
-            CurrentView = new HomeView();
+            CurrentView = new ShellView();
         }
     }
 }

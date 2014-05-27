@@ -73,21 +73,21 @@
     <Compile Include="ViewModels\BaseStatusBarConnectionManager.cs" />
     <Compile Include="ViewModels\BaseStatusBarFeedbackViewModel.cs" />
     <Compile Include="ViewModels\BaseStatusBarLicenseManagerViewModel.cs" />
-    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\MainFrameViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\MenuBlockFrameViewModel.cs" />
-    <Compile Include="Views\BaseStatusBarConnectionManagerView.xaml.cs">
+    <Compile Include="Views\TitleBarViews\BaseStatusBarConnectionManagerView.xaml.cs">
       <DependentUpon>BaseStatusBarConnectionManagerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BaseStatusBarFeedbackView.xaml.cs">
+    <Compile Include="Views\TitleBarViews\BaseStatusBarFeedbackView.xaml.cs">
       <DependentUpon>BaseStatusBarFeedbackView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BaseStatusBarLicenseManagerView.xaml.cs">
+    <Compile Include="Views\TitleBarViews\BaseStatusBarLicenseManagerView.xaml.cs">
       <DependentUpon>BaseStatusBarLicenseManagerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\HomeView.xaml.cs">
-      <DependentUpon>HomeView.xaml</DependentUpon>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainFrameView.xaml.cs">
       <DependentUpon>MainFrameView.xaml</DependentUpon>
@@ -98,14 +98,14 @@
     <Compile Include="Views\MenuBlockFrameView.xaml.cs">
       <DependentUpon>MenuBlockFrameView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TileViews\AnalyseView.xaml.cs">
-      <DependentUpon>AnalyseView.xaml</DependentUpon>
+    <Compile Include="Views\AnalyseViews\ShellAnalyseView.xaml.cs">
+      <DependentUpon>ShellAnalyseView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TileViews\LearnView.xaml.cs">
-      <DependentUpon>LearnView.xaml</DependentUpon>
+    <Compile Include="Views\LearnViews\ShellLearnView.xaml.cs">
+      <DependentUpon>ShellLearnView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TileViews\ReviewView.xaml.cs">
-      <DependentUpon>ReviewView.xaml</DependentUpon>
+    <Compile Include="Views\ReviewViews\ShellReviewView.xaml.cs">
+      <DependentUpon>ShellReviewView.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -119,19 +119,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
-    <Page Include="Views\BaseStatusBarConnectionManagerView.xaml">
+    <Page Include="Views\TitleBarViews\BaseStatusBarConnectionManagerView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\BaseStatusBarFeedbackView.xaml">
+    <Page Include="Views\TitleBarViews\BaseStatusBarFeedbackView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\BaseStatusBarLicenseManagerView.xaml">
+    <Page Include="Views\TitleBarViews\BaseStatusBarLicenseManagerView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\HomeView.xaml">
+    <Page Include="Views\ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -147,15 +147,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\TileViews\AnalyseView.xaml">
+    <Page Include="Views\AnalyseViews\ShellAnalyseView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\TileViews\LearnView.xaml">
+    <Page Include="Views\LearnViews\ShellLearnView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\TileViews\ReviewView.xaml">
+    <Page Include="Views\ReviewViews\ShellReviewView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

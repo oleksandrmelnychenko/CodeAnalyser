@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using SharePointCodeAnalyzer.Client.AppEngine.Navigation;
 using SharePointCodeAnalyzer.Client.Views;
+using SharePointCodeAnalyzer.Client.Views.TitleBarViews;
 using SharePointCodeAnalyzer.CommonControls;
 
 namespace SharePointCodeAnalyzer.Client.ViewModels

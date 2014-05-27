@@ -101,7 +101,6 @@
     <Compile Include="Core\TileColorConverter.cs" />
     <Compile Include="Core\TypeToImageConverter.cs" />
     <Compile Include="Core\ViewModelToViewConverter.cs" />
-    <Compile Include="IPopup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatusBarItem.cs" />
   </ItemGroup>

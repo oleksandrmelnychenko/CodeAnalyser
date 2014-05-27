@@ -1,13 +1,13 @@
 ﻿using SharePointCodeAnalyzer.Client.AppEngine.Views;
 
-namespace SharePointCodeAnalyzer.Client.Views.TileViews
+namespace SharePointCodeAnalyzer.Client.Views.ReviewViews
 {
     /// <summary>
     /// Interaction logic for ReviewView.xaml
     /// </summary>
-    public partial class ReviewView : ITileView
+    public partial class ShellReviewView : ITileView
     {
-        public ReviewView()
+        public ShellReviewView()
         {
             InitializeComponent();
         }

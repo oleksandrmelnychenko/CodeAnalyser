@@ -6,12 +6,12 @@ namespace SharePointCodeAnalyzer.Client.Views
     /// <summary>
     /// Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class HomeView : IView
+    public partial class ShellView : IView
     {
-        public HomeView()
+        public ShellView()
         {
             InitializeComponent();
-            DataContext = new HomeViewModel();
+            DataContext = new ShellViewModel();
         }
     }
 }

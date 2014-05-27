@@ -2,19 +2,21 @@
 using System.Collections.ObjectModel;
 using SharePointCodeAnalyzer.Client.AppEngine.Views;
 using SharePointCodeAnalyzer.Client.Views;
-using SharePointCodeAnalyzer.Client.Views.TileViews;
+using SharePointCodeAnalyzer.Client.Views.AnalyseViews;
+using SharePointCodeAnalyzer.Client.Views.LearnViews;
+using SharePointCodeAnalyzer.Client.Views.ReviewViews;
 using SharePointCodeAnalyzer.CommonControls;
 
 namespace SharePointCodeAnalyzer.Client.ViewModels
 {
-    public sealed class HomeViewModel : BaseViewModel, IShell
+    public sealed class ShellViewModel : BaseViewModel, IShell
     {
         public ObservableCollection<MenuBlockFrameView> MenuBlocks { get; set; }
 
         /// <summary>
         ///     ctor.
         /// </summary>
-        public HomeViewModel()
+        public ShellViewModel()
         {
             MenuBlocks = new ObservableCollection<MenuBlockFrameView>(BuildHomeMenu());
         }
@@ -23,10 +25,15 @@ namespace SharePointCodeAnalyzer.Client.ViewModels
         {
             return new List<MenuBlockFrameView>
             {
-                new MenuBlockFrameView(new AnalyseView()),
-                new MenuBlockFrameView(new ReviewView()),
-                new MenuBlockFrameView(new LearnView()),
+                new MenuBlockFrameView(new ShellAnalyseView()),
+                new MenuBlockFrameView(new ShellReviewView()),
+                new MenuBlockFrameView(new ShellLearnView()),
             };
+        }
+
+        public void BuildShell()
+        {
+
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using SharePointCodeAnalyzer.Client.AppEngine.Views;
 
-namespace SharePointCodeAnalyzer.Client.Views.TileViews
+namespace SharePointCodeAnalyzer.Client.Views.LearnViews
 {
     /// <summary>
     /// Interaction logic for LearnView.xaml
     /// </summary>
-    public partial class LearnView : ITileView
+    public partial class ShellLearnView : ITileView
     {
-        public LearnView()
+        public ShellLearnView()
         {
             InitializeComponent();
         }

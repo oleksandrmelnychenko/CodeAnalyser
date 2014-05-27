@@ -1,6 +1,6 @@
 ﻿using SharePointCodeAnalyzer.Client.ViewModels;
 
-namespace SharePointCodeAnalyzer.Client.Views
+namespace SharePointCodeAnalyzer.Client.Views.TitleBarViews
 {
     /// <summary>
     /// Interaction logic for BaseStatusBarLicenseManagerView.xaml
